@@ -1,0 +1,15 @@
+﻿<Window x:Class="CoppyWeeklyMonthly.Help"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CoppyWeeklyMonthly"
+        mc:Ignorable="d"
+        FontSize="14"
+        Background="#FFF8DEB0"
+        FontStyle="Italic"
+        Title="Помощь" Height="300" Width="300">
+    <Grid>
+        <TextBlock Text="Копирование производиться еженедельно и ежемесячно. Еженедельное копирование должно осуществляется по понедельникам. Ежемесячное копирование должно осуществляться в начале месяца. Для корректной работы программы необходимо расположить программу ближе к корню диска." Margin="5" VerticalAlignment="Center" TextWrapping="Wrap" TextAlignment="Center"/>
+    </Grid>
+</Window>

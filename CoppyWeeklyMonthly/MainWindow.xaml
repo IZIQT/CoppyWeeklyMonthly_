@@ -1,0 +1,59 @@
+﻿<Window x:Class="CoppyWeeklyMonthly.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        FontSize="14"
+        Background="#FFF8DEB0"
+        FontStyle="Italic"
+        
+        Title="Программа еженедельного/ежемесечного копирования каталогов" Height="350" Width="525">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="10"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="10"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="1" Grid.Column="1" Text="Выберите какой вид копирования выполнит программа: "/>
+        <Button x:Name="HelpButton" Background="#FFF8DEB0" Content="?" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="{Binding ActualHeight, ElementName=HelpButton}" Click="HelpButton_Click"/>
+
+        <RadioButton Grid.Row="2" Grid.Column="1" x:Name="WeeklyRButton">
+            <TextBlock Text="Еженедельное копирование" />
+        </RadioButton>
+        <RadioButton Grid.Row="3" Grid.Column="1" x:Name="MonthlyRButton">
+            <TextBlock Text="Ежемесячное копирование" />
+        </RadioButton>
+
+        <TextBlock Grid.Row="5" Grid.Column="1" x:Name="TextTimerMonthly" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 5 0"/>
+
+        <Grid Grid.Row="6" Grid.Column="1" TextBlock.TextAlignment="Center" Visibility="Hidden" x:Name="ScaleVisibylity">
+            <ProgressBar x:Name="PowerScaleMontle" />
+            <TextBlock x:Name="PowerTextMontle"/>
+        </Grid>
+
+        <TextBlock Grid.Row="7" Grid.Column="1" x:Name="TextTimerWeek" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0 0 5 0"/>
+
+        <Grid Grid.Row="8" Grid.Column="1" TextBlock.TextAlignment="Center">
+            <ProgressBar x:Name="PowerScaleWeek" />
+            <TextBlock x:Name="PowerTextWeek"/>
+        </Grid>
+
+
+        <Button x:Name="ButtonStartCoppy" Grid.Row="10" Grid.Column="1" Content="Начать копирование" BorderBrush="Blue" Click="Button_Click"/>
+    </Grid>
+</Window>
