@@ -29,9 +29,12 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="10"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Grid.Row="1" Grid.Column="1" Text="Выберите какой вид копирования выполнит программа: "/>
-        <Button x:Name="HelpButton" Background="#FFF8DEB0" Content="?" Grid.Row="1" Grid.Column="1" HorizontalAlignment="Right" Width="{Binding ActualHeight, ElementName=HelpButton}" Click="HelpButton_Click"/>
-
+        <DockPanel Grid.Row="1" Grid.Column="1">
+            <TextBlock  Text="Выберите какой вид копирования выполнит программа: "/>
+            <Button x:Name="HelpButton" Background="#FFF8DEB0" Content="?" Grid.Row="1" Grid.Column="1" DockPanel.Dock="Right" HorizontalAlignment="Right" Width="{Binding ActualHeight, ElementName=HelpButton}" Click="HelpButton_Click"/>
+            <Button x:Name="SetingButton" Background="#FFF8DEB0" Content="Папки" HorizontalAlignment="Right" DockPanel.Dock="Right" Click="SetingButton_Click" />
+        </DockPanel>
+        
         <RadioButton Grid.Row="2" Grid.Column="1" x:Name="WeeklyRButton">
             <TextBlock Text="Еженедельное копирование" />
         </RadioButton>
